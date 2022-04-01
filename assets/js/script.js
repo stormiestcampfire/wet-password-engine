@@ -13,11 +13,8 @@ function writePassword() {
   var password = "";
   var passwordCharacters = "";
   // 
-  var password = writePassword();
     alert("Please select from the criteria following criteria for your password.")
-    
     var askUserPasswordLength = prompt("Select a length for the password. It can anywhere from 8 to 128 characters.") 
-    
   // asks user if they would like to add lowercase letters
     var askUserLowCase = confirm("Mix in lowercase letters?")
       if (askUserLowCase) {
@@ -38,15 +35,23 @@ function writePassword() {
       if (askUserNum) {
         passwordCharacters += askUserNum;
       }
-      var passwordText = document.querySelector("#password");
-        passwordCh.value = password;
-        for (var i = 0; i <= askUserPasswordLength; i++) {
-        var randomNumber = Math.floor(Math.random() * passwordCharacters.length);
-        password += passwordCharacters.substring(randomNumber, randomNumber +1);
- }
+     
 }      
-
 // Add event listener to generate button
+function makePassword(){
+  var password = writePassword
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+  for (var i = 0; i <= askUserPasswordLength; i++) {
+  var randomNum = Math.floor(Math.random() * passwordCharacters.length);
+  password += passwordCharacters.substring(randomNum, randomNum +1);
+}
+}
+
 generateBtn.addEventListener("click", writePassword);
 
+
 console.log(generateBtn)
+
+
+
