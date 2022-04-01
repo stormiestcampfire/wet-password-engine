@@ -12,7 +12,7 @@ var generateBtn = document.querySelector("#generate");
 function makePassword() {
   var password = "";
   var passwordCharacters = "";
-  // 
+  // lets user know that they have to choose criteria
     alert("Please select from the following criteria for your password.")
     var askUserPasswordLength = prompt("Select a length for the password. It can anywhere from 8 to 128 characters.") 
   // asks user if they would like to add lowercase letters
@@ -44,7 +44,6 @@ function makePassword() {
 }      
 
 function writePassword(){
-  var password = makePassword
   var passwordText = document.querySelector("password");
   passwordText.value = password;
   return ("password")
