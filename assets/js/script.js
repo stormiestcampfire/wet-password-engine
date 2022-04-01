@@ -9,9 +9,11 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+  var password = "";
+  var passwordCharacters = "";
   // 
-  var askUserPasswordLength = prompt("Select a length for the password. It can anywhere from 8 to 128 characters.") 
   var password = generatePassword();
+  var askUserPasswordLength = prompt("Select a length for the password. It can anywhere from 8 to 128 characters.") 
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -19,7 +21,7 @@ function writePassword() {
 }
 
 
-  for (var i = 0; i <= passwordLength; i++) {
+  for (var i = 0; i <= askUserpasswordLength; i++) {
     var randomNumber = Math.floor(Math.random() * charsPossible.length);
     password += charsPossible.substring(randomNumber, randomNumber +1);
  }
