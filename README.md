@@ -3,6 +3,7 @@
 ## Description
 This password generator asks you for Five Criteria: the desired length of your password and whether you want any combination of a lowercase letter, an uppercase letter, a special character (!@#$%^&*-+), or a number.  
 That's Five more Criteria than the other password generator you're not using: because you're using this one!  
+<p>&nbsp;</p>  
 The code behind it all is pretty and organized; it's like candy, but for your eyes. A combination of two different functions come together to generate the password ("makeFunction" and "writeFunction").  
 
 ## Challenges and Reflections
