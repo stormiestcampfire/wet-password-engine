@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+ 
   // Possible characters in a password: "qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM 1234567890 ~!@#$%^&*()_-+="
   //These are lists of possible characters.
   var charactersLowCase = "qwertyuiopasdfghjklzxcvbnm"
@@ -12,7 +13,7 @@ function writePassword() {
   var password = "";
   var passwordCharacters = "";
   // 
-  var password = generatePassword();
+  var password = writePassword();
     alert("Please select from the criteria following criteria for your password.")
     
     var askUserPasswordLength = prompt("Select a length for the password. It can anywhere from 8 to 128 characters.") 
@@ -36,24 +37,16 @@ function writePassword() {
       var askUserNum = confirm("Mix in numbers?");
       if (askUserNum) {
         passwordCharacters += askUserNum;
-      
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-  for (var i = 0; i <= askUserpasswordLength; i++) {
-    var randomNumber = Math.floor(Math.random() * charsPossible.length);
-    password += charsPossible.substring(randomNumber, randomNumber +1);
+      }
+      var passwordText = document.querySelector("#password");
+        passwordCh.value = password;
+        for (var i = 0; i <= askUserPasswordLength; i++) {
+        var randomNumber = Math.floor(Math.random() * passwordCharacters.length);
+        password += passwordCharacters.substring(randomNumber, randomNumber +1);
  }
-
- function writePassword(password){
-  var password = generatePassword();
-  var pwTextArea = document.getElementById("#password");
-  pwTextArea.value = password;
-  return ("")
-  
-  }
- console.log(generateBtn) 
+}      
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+console.log(generateBtn)
