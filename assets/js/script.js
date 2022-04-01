@@ -9,11 +9,11 @@ var generateBtn = document.querySelector("#generate");
   var charactersNum = "1234567890"
 
 // Write password to the #password input
-function writePassword() {
+function makePassword() {
   var password = "";
   var passwordCharacters = "";
   // 
-    alert("Please select from the criteria following criteria for your password.")
+    alert("Please select from the following criteria for your password.")
     var askUserPasswordLength = prompt("Select a length for the password. It can anywhere from 8 to 128 characters.") 
   // asks user if they would like to add lowercase letters
     var askUserLowCase = confirm("Mix in lowercase letters?")
@@ -35,23 +35,27 @@ function writePassword() {
       if (askUserNum) {
         passwordCharacters += askUserNum;
       }
+  // should generate the password
+      for (var i = 0; i <= askUserPasswordLength; i++) {
+        var randomNum = Math.floor(Math.random() * passwordCharacters.length);
+        password += passwordCharacters.substring(randomNum, randomNum +1);
+      }
      
 }      
-// Add event listener to generate button
-function makePassword(){
-  var password = writePassword
-  var passwordText = document.querySelector("#password");
+
+function writePassword(){
+  var password = makePassword
+  var passwordText = document.querySelector("password");
   passwordText.value = password;
-  for (var i = 0; i <= askUserPasswordLength; i++) {
-  var randomNum = Math.floor(Math.random() * passwordCharacters.length);
-  password += passwordCharacters.substring(randomNum, randomNum +1);
-}
+  return ("password")
 }
 
-generateBtn.addEventListener("click", writePassword);
+// Add event listener to generate button
+generateBtn.addEventListener("click", makePassword);
 
 
-console.log(generateBtn)
+console.log(makePassword)
+console.log(writePassword)
 
 
 
